@@ -2,15 +2,6 @@
 // Target: common scss
 // Last Edited: 2020-06-03 11:18:24 UTC
 
-// HACKS (Display for Beta and Staff Users)
-// body:not(.primary-group-theme-beta):not(.staff) { 
-//     .user-preferences .select-kit-row[data-name="Light"],
-//     .menu-container-footer-links li[data-name="Light"],
-//     .menu-container-footer-links div:first-child {
-//         display: none;
-//     }
-// }
-
 // MIXINS
 @mixin flexbox() {
     display: -webkit-box;
@@ -696,53 +687,6 @@ input[type="radio"] {
     }
 }
 
-// NEWSLETTER
-.newsletter {
-    margin-top: 40px;
-    padding: 88px 0;
-    @include align(center);
-    
-    input {
-        padding: .75rem 1.75rem !important;
-    }
-    
-    .input-group {
-        width: 70%;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        
-        @include for-tablet-view {  
-            width: 100%;
-        }
-    }
-    
-    .form-control {
-        background-color: transparent;
-        border: none;
-        border-bottom: solid 2px $secondary !important;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        flex: 1 1 0%;
-        width: 100%;
-    }
-    
-    .input-group-append {
-        display: flex;
-        margin-left: 24px;
-    }
-
-}
-
-#subscribe-result {
-    margin: 1rem 0 0 1.75rem;
-    width: 100%;
-}
 
 // CONTENT
 .category-Wiki .category-list {
@@ -926,19 +870,6 @@ input[type="radio"] {
     .link-bottom-line span {
         @include boldFont; 
         color: $primary-medium !important;
-    }
-    
-    tr:nth-child(9) {
-        border-top: solid 40px $header-background;
-        
-        td:first-child:before {
-            content: "Private Sections";
-            @include boldFont;
-            color: $primary;
-            position: absolute;
-            top: -32px;
-            left: 16px;
-        }
     }
     
     .topic-post-badges {
@@ -1249,95 +1180,7 @@ ol.category-breadcrumb {
     }
 }
 
-// FOOTER
-.footer-message {
-    
-    .d-icon {
-        font-size: 1em !important;
-        margin: 0 0.2em 0 0 !important;
-    }
-}
 
-.footer {
-    color: $secondary-high;
-    padding: 20px 0;
-    
-    .item {
-        @include flexbox();
-        @include pack(justify);
-        justify-content: space-between;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-
-        @include for-tablet-view {    
-            -ms-flex-direction: column;
-            flex-direction: column;
-            @include pack(center);
-            justify-content: center;
-            @include align(center);
-        }
-    }
-    
-    a {
-        color: $secondary-high;
-        @include boldFont;
-        
-        &:hover {
-            color: $secondary;
-            text-decoration: none;
-        }
-    }
-    
-}
-
-.footer-links {
-    -webkit-box-ordinal-group: 4;
-    @include order(3);
-    
-    li {
-        margin: 0 8px;
-        
-        @include for-tablet-view {
-            margin: 4px 0;
-        }
-        
-    }
-    
-    @include for-tablet-view {  
-        flex-direction: column;
-        margin: 0 0 24px 0;
-        font-size: 1.2em;
-    }
-}
-
-.footer-social {
-    -webkit-box-ordinal-group: 5;
-    @include order(4);
-    
-    li {
-        margin: 0 4px;
-        
-        @include for-tablet-view {    
-            margin: 0 8px;
-        }
-    }
-}
-
-.copyright {
-    -webkit-box-ordinal-group: 3;
-    @include order(2);
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    @include inline-flexbox();
-    @include align(center);
-    
-    @include for-tablet-view {    
-        -webkit-box-ordinal-group: 5;
-        @include order(4);
-        padding-top: 8px;
-    }
-}
 
 // ADMIN
 .admin-interface {
@@ -1521,3 +1364,76 @@ ol.category-breadcrumb {
     color: $secondary;
   }
 }
+
+// Material Design
+
+
+@mixin boxShadow {
+    // Matched from https://material.io/components/cards/
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  @mixin buttonShadow {
+    // Matched from https://material.io/components/buttons/
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  }
+  
+  //raise and round buttons
+  .btn {
+    border-radius: 4px;
+    @include boxShadow;
+    &.btn-flat.close {
+      box-shadow: none;
+    }
+  }
+  
+  //remove shadow from a few buttons
+  .d-editor-button-bar .btn,
+  .bulk-select-all,
+  .bulk-clear-all,
+  .period-chooser-header,
+  .topic-map .btn.no-text,
+  .badge-section .btn,
+  #revision .btn,
+  #new-account-link,
+  #login-link {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  // Topic adjustments
+  
+  .small-action {
+    border-top: none;
+    margin-top: 1em;
+    max-width: 808px;
+    button {
+      margin-left: 1em;
+      background-color: lighten($secondary, 10%);
+    }
+  }
+  
+  .read-state {
+    right: 1em;
+  }
+  
+  .gap {
+    margin-top: 1em;
+  }
+  
+  .post-notice {
+    border: none;
+    background: transparent;
+    margin-left: 50px;
+    margin-top: 0.75em;
+  }
+  
+  .popup-menu .btn {
+    box-shadow: none;
+  }
+  
+  .badge-wrapper.bullet span.badge-category {
+      color: $secondary;
+  }
