@@ -1,0 +1,11 @@
+.tag-box {
+  .discourse-tag.simple, 
+  .discourse-tag.simple:visited {
+    color: $tertiary;
+  }
+}
+
+.selected-tag {
+  min-height: auto;
+  line-height: unset;
+}

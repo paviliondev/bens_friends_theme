@@ -1,0 +1,23 @@
+.select-kit {
+  &.dropdown-select-box.period-chooser .select-kit-collection {
+    padding: 0;
+  }
+  
+  &.dropdown-select-box.period-chooser .period-chooser-row {
+    padding: 8px 16px;
+    @include boldFont;
+  }
+  
+  .d-icon {
+    color: $primary;
+  }  
+}
+
+.select-kit-header {
+  padding: 0 0.5em;
+}
+
+.select-kit.single-select.is-expanded .select-kit-header {
+  outline: none;
+  background-color: $secondary;
+}

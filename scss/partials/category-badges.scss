@@ -1,0 +1,31 @@
+.badge-wrapper {
+  background-color: $primary-medium;
+  padding: 1px 10px;
+  border-radius: 16px;
+  color: $secondary;
+  margin: 0.25em 0;
+  font-size: $font-down-2;
+
+  .badge-category .category-name {
+    margin-right: 0;
+  }
+  
+  span.badge-category .d-icon,
+  span.badge-category .category-name {
+    color: $secondary;
+  }
+}
+
+.badge-notification.new-topic::before {
+  color: $tertiary;
+}
+
+.badge-wrapper:hover,
+.menu-panel li.category-link a:hover,
+.menu-panel li.category-link a:focus, {
+  background-color: darken(#ABAFB6, 5%); 
+}
+
+.badge-wrapper.bar span.badge-category{
+  color: $secondary;
+}

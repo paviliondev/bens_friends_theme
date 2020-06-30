@@ -1,0 +1,82 @@
+.topic-map {
+  margin: 16px 0;
+
+  .buttons .btn,
+  .buttons .btn:hover {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.topic-body {  
+  .cooked {
+    padding: 16px 0 0 0;
+  }
+  
+  .topic-meta-data {
+    padding: 8px 0 0 56px;
+  }
+}
+
+.small-action,
+.post-notice {
+  border-top: none;
+}
+
+.small-action {
+  border-top: none;
+  margin-top: 1em;
+  max-width: 808px;
+  button {
+    margin-left: 1em;
+    background-color: lighten($secondary, 10%);
+  }
+}
+
+.read-state {
+  right: 1em;
+}
+
+.gap {
+  margin-top: 1em;
+}
+
+.post-notice {
+  border: none;
+  background: transparent;
+  margin-left: 50px;
+  margin-top: 0.75em;
+}
+
+.topic-admin-popup-menu {  
+  .d-button-label {
+    text-transform: none;
+  }        
+}
+
+.read-state {
+  right: -20px;
+}
+
+.topic-post .row { 
+  position: relative;
+}
+
+.small-action .topic-avatar {
+  position: relative;
+
+  .d-icon {
+    font-size: 1.2em;
+  }
+}
+
+.topic-avatar {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.timeline-container {
+  margin-top: 60px;
+}
+

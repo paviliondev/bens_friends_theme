@@ -1,0 +1,20 @@
+.admin-interface {
+  .admin-content {
+    .nav-stacked li {
+      width: 100%;
+    }
+    
+    .channel-footer {
+      padding: 16px 8px;
+    }
+  }
+  .admin-contents {
+    .overridden {
+      padding: 16px;
+    }
+    
+    .show-current-style .row {
+      margin: 0;
+    }
+  }
+}

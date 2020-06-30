@@ -1,0 +1,101 @@
+.contents,
+.admin-main-nav,
+.cakeday,
+.user-primary-navigation,
+.reviewable,
+.modal {
+  .nav-pills>li {
+    a {
+      border-radius: 40px;
+      border: solid 1px $primary-low-mid;
+      color: $primary;
+      margin-right: 8px;
+
+      &:hover,
+      &:active,
+      &.active {
+        background-color: $primary-low;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.list-controls {
+  .nav {
+    margin: 20px 0 0 0;
+  }
+  
+  .nav-pills {
+    li {
+      margin: 0 30px 0 0;
+    }
+
+    a {
+      padding: 6px 0;
+      
+      &:hover,
+      &:active,
+      &.active {
+        color: $primary;
+        background-color: lighten($secondary, 5%);
+      }
+    }
+  }
+}
+
+.admin-main-nav {
+  margin-top: 16px;
+}
+
+.admin-controls {
+  .nav-pills>li {
+    a {
+      color: $primary-medium;
+      @include boldFont;
+
+      &:hover,
+      &:active,
+      &.active {
+        color: $primary;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+ol.category-breadcrumb {
+  margin: 20px 30px 0 0;
+  
+  li {
+    display: none;
+  }
+  
+  li:first-child {
+    margin: 0;
+    display: block;
+    text-transform: capitalize;
+    
+    .combo-box-header {
+      border: none;
+      
+      .name {
+        font-size: 1.1487em;
+        
+        @include for-tablet-view {
+          font-size: 1em;
+        }
+      }
+    }     
+  }
+  
+  .badge-wrapper {
+    background: none;
+    line-height: normal;
+    
+    span.badge-category .category-name,
+    span.badge-category .d-icon {
+      color: $primary;
+    }
+  }
+}

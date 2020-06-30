@@ -1,0 +1,88 @@
+.banner-container {
+  padding: 4em 0 0 0;
+}
+
+.bens-friends-banner {
+  display: none;
+  background: linear-gradient(150deg, $tertiary 0%, $secondary 90%, $secondary 100%);
+  
+  .container {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1110px;
+    position: relative;
+  }
+  
+  h1, p {
+    font-weight: 600;
+    text-shadow: 1px 1px 1px $tertiary;
+  }
+  
+  .logo {
+    position: absolute;
+    right: 40px;
+    background-image: url($logo);
+    background-size: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    @include boxShadow;
+    
+    &:hover {
+      box-shadow: shadow('card');
+    }
+  }
+}
+
+.navigation-categories .bens-friends-banner {
+  display: block;
+  color: $secondary;
+}
+
+.consent_banner {
+  padding: 16px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: 0;
+
+  span {
+    margin-left: 40px;
+
+    @include for-tablet-view {
+      margin-left: 16px;
+    }
+  }
+
+  .d-button-label {
+    margin-left: 0;
+
+    @include for-tablet-view {
+      margin-left: 16px;
+    }
+  }
+
+  .close {
+    font-size: $font-0;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+
+    @include for-tablet-view {
+      right: 16px;
+    }
+
+    @include for-mobile-view {
+      top: 16px;
+    }
+  }
+}
+
+.navigation-categories,
+.navigation-topics,
+[class*="category"] {
+  .consent_banner {
+    margin-bottom: 0;
+  }
+}

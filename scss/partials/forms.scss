@@ -1,0 +1,16 @@
+input,
+textarea {
+  border-color: $primary-low-mid !important;
+  border-radius: 3px;
+  min-height: 40px !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: auto !important;
+}
+
+.input-group-lg > .custom-select, 
+.input-group-lg > .form-control:not(textarea) {
+  height: calc(2em + 1rem + 2px);
+}

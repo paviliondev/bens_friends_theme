@@ -1,0 +1,20 @@
+.dark-bg {
+  background-color: $primary; 
+}
+
+.light-blue-bg {
+  background-color: lighten($tertiary, 40%); 
+}
+
+.white-txt {
+  color: $secondary;
+}
+
+.topic-statuses .topic-status {
+  color: $primary-high;
+}
+
+.topic-list .num.posts a,
+.topic-list .num.activity a {
+  padding: 0;
+}

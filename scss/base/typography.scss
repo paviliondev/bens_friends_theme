@@ -1,0 +1,53 @@
+html,
+body {
+  color: $primary;
+  font-family: "SamsungOne-400", Arial, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.text-size-smaller {
+  font-size: $font-down-1;
+}
+
+h1 {
+  font-size: $font-up-5;
+  @include boldFont;
+}
+
+h3,
+th,
+.badge-wrapper {
+  @include semiBoldFont;
+}
+
+.bold {
+  @include boldFont;
+}
+
+.badge-category-bg,
+.badge-category-parent-bg,
+.subcategories .badge-notification.new-posts,
+.categories-list ol.category-breadcrumb {
+  display: none !important;
+}
+
+.topic-excerpt a,
+.category-description a,
+.footer-message a,
+.suggested-topics-message a {
+  @include fancyLink;
+  position: relative;
+}
+
+.link-bottom-line a:hover,
+a.title:hover,
+.contents a:hover,
+.title-wrapper a:hover {
+  text-decoration: none;
+}
+
+.top-date-string,
+.top-lists .btn {
+  text-transform: none !important;
+}

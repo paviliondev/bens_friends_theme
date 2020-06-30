@@ -1,0 +1,49 @@
+#main-outlet {
+  padding: 0 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.list-container,
+.posts {
+  .row {
+    margin: 0;
+  }
+}
+
+.newsletter .container,
+.footer .container {
+  margin: 0 auto;
+}
+
+.directory,
+.reviewable,
+.badges-page,
+.show-badge,
+.groups-header,
+.admins,
+.cakeday,
+.body-page,
+.search-container,
+.groups-new-page {
+  margin: 24px 0 0 0;
+}
+
+.item,
+.column {
+  align-self: baseline;
+}
+
+.column {
+  @include flexbox();
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+tbody,
+tr {
+  border: none;
+}
